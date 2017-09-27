@@ -15,36 +15,38 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        let regButtonWidth = self.view.frame.width/4
+        let regButtonHeight = self.view.frame.height/7
+        
         
 //INIT all buttons and display screen
         let DisplayScreen: UIView! = UIView.init()
         
-        let A1ClearSign: UIButton! = UIButton.init()
-        let A2SwapSign: UIButton! = UIButton.init()
-        let A3PercentSign: UIButton! = UIButton.init()
-        let A4DivideSign: UIButton! = UIButton.init()
+        let A1ClearSign: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+        let A2SwapSign: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+        let A3PercentSign: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+        let A4DivideSign: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
         
-//        let B1Seven: UIButton!
-//        let B2Eight: UIButton!
-//        let B3Nine: UIButton!
-//        let B4Multiply: UIButton!
-//        
-//        let C1Four: UIButton!
-//        let C2Five: UIButton!
-//        let C3Six: UIButton!
-//        let C4Subtract: UIButton!
-//        
-//        let D1One: UIButton!
-//        let D2Two: UIButton!
-//        let D3Three: UIButton!
-//        let D4Plus: UIButton!
-//        
-//        let E1E2Zero: UIButton!
-//        let E3Decimal: UIButton!
-//        let E4Equal: UIButton!
+        let B1Seven: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+        let B2Eight: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+        let B3Nine: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+        let B4Multiply: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
         
-        let regButtonWidth = self.view.frame.width/4
-        let regButtonHeight = self.view.frame.height/7
+        let C1Four: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+        let C2Five: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+        let C3Six: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+        let C4Subtract: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+        
+        let D1One: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+        let D2Two: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+        let D3Three: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+        let D4Plus: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+        
+        let E1E2Zero: UIButton! = UIButton.init()
+        let E3Decimal: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+        let E4Equal: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
+
+        
         
         
 //ADD TO SUBVIEW all buttons and display screen
@@ -54,8 +56,9 @@ class ViewController: UIViewController {
         self.view.addSubview(A3PercentSign)
         self.view.addSubview(A4DivideSign)
         
-//SET THE COLOR of all buttons and display screen
         
+        
+//SET THE COLOR of all buttons and display screen
         DisplayScreen.backgroundColor = UIColor.black
         
         A1ClearSign.backgroundColor = UIColor.blue
@@ -63,6 +66,24 @@ class ViewController: UIViewController {
         A3PercentSign.backgroundColor = UIColor.blue
         A4DivideSign.backgroundColor = UIColor.blue
         
+        B1Seven.backgroundColor = UIColor.blue
+        B2Eight.backgroundColor = UIColor.blue
+        B3Nine.backgroundColor = UIColor.blue
+        B4Multiply.backgroundColor = UIColor.blue
+        
+        C1Four.backgroundColor = UIColor.blue
+        C2Five.backgroundColor = UIColor.blue
+        C3Six.backgroundColor = UIColor.blue
+        C4Subtract.backgroundColor = UIColor.blue
+        
+        D1One.backgroundColor = UIColor.blue
+        D2Two.backgroundColor = UIColor.blue
+        D3Three.backgroundColor = UIColor.blue
+        D4Plus.backgroundColor = UIColor.blue
+        
+        E1E2Zero.backgroundColor = UIColor.blue
+        E3Decimal.backgroundColor = UIColor.blue
+        E4Equal.backgroundColor = UIColor.blue
         
     
 //Set the Sizing and Position of DisplayScreen to 2/7, Just For Now

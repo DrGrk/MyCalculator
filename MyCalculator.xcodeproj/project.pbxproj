@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7609DFA71F7C2F8A003CCFF9 /* RegularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609DFA61F7C2F8A003CCFF9 /* RegularButton.swift */; };
+		7609DFA91F7C3A33003CCFF9 /* KeyPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7609DFA81F7C3A33003CCFF9 /* KeyPad.swift */; };
 		76AC6AC71F7B2C7500D23BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AC6AC61F7B2C7500D23BB8 /* AppDelegate.swift */; };
 		76AC6AC91F7B2C7500D23BB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AC6AC81F7B2C7500D23BB8 /* ViewController.swift */; };
 		76AC6ACC1F7B2C7500D23BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76AC6ACA1F7B2C7500D23BB8 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7609DFA61F7C2F8A003CCFF9 /* RegularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularButton.swift; sourceTree = "<group>"; };
+		7609DFA81F7C3A33003CCFF9 /* KeyPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPad.swift; sourceTree = "<group>"; };
 		76AC6AC31F7B2C7500D23BB8 /* MyCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76AC6AC61F7B2C7500D23BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76AC6AC81F7B2C7500D23BB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +44,8 @@
 		76AC6ABA1F7B2C7500D23BB8 = {
 			isa = PBXGroup;
 			children = (
+				7609DFA81F7C3A33003CCFF9 /* KeyPad.swift */,
+				7609DFA61F7C2F8A003CCFF9 /* RegularButton.swift */,
 				76AC6AC51F7B2C7500D23BB8 /* MyCalculator */,
 				76AC6AC41F7B2C7500D23BB8 /* Products */,
 			);
@@ -139,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7609DFA91F7C3A33003CCFF9 /* KeyPad.swift in Sources */,
+				7609DFA71F7C2F8A003CCFF9 /* RegularButton.swift in Sources */,
 				76AC6AC91F7B2C7500D23BB8 /* ViewController.swift in Sources */,
 				76AC6ACF1F7B2C7500D23BB8 /* MyCalculator.xcdatamodeld in Sources */,
 				76AC6AC71F7B2C7500D23BB8 /* AppDelegate.swift in Sources */,
@@ -303,6 +311,7 @@
 				76AC6ADA1F7B2C7500D23BB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
