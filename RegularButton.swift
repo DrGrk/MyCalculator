@@ -21,16 +21,21 @@ class RegularButton: UIButton {
         self.backgroundColor = UIColor.orange
     }
     
+    
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented. You did not call the correct init, check th Regular Button file for the correct init.")
     }
+    
+    
+    
     
     func assignButtonUse () {
         switch buttonIs {
         case 0:
             //ASSIGN FUNCTION
             //ASSIGN POSITION
-            //
+            
             break
             
         case 1:
@@ -63,7 +68,6 @@ class RegularButton: UIButton {
         case 10:
             <#code#>
             
-            
         case 11:
             <#code#>
             
@@ -91,7 +95,7 @@ class RegularButton: UIButton {
         case 19:
             <#code#>
             
-        case <#pattern#>:
+        case 20:
             <#code#>
             
             

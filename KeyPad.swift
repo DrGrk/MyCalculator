@@ -9,15 +9,19 @@
 import Foundation
 import UIKit
 
+
 class KeyPad: NSObject {
     
     var standardKeyPad: Array<RegularButton>!
-    
+
     init(screenWidth: CGFloat, screenHeight: CGFloat) {
         super.init()
         standardKeyPad = Array.init()
-        createStandardKeyPad(screenWidth: screenWidth, screenHeight: screenHeight)
+        createStandardKeyPad (screenWidth: screenWidth, screenHeight: screenHeight)
     }
+    
+    
+    
     
     func createStandardKeyPad(screenWidth: CGFloat, screenHeight: CGFloat) {
         let i = 0
@@ -27,7 +31,6 @@ class KeyPad: NSObject {
             
         }
     }
-    
     
     
 }
