@@ -7,23 +7,24 @@
 //
 
 import Foundation
+import UIKit
 
 class KeyPad: NSObject {
     
     var standardKeyPad: Array<RegularButton>!
     
-    override init() {
+    init(screenWidth: CGFloat, screenHeight: CGFloat) {
         super.init()
         standardKeyPad = Array.init()
-        createStandardKeyPad()
+        createStandardKeyPad(screenWidth: screenWidth, screenHeight: screenHeight)
     }
     
-    func createStandardKeyPad() {
+    func createStandardKeyPad(screenWidth: CGFloat, screenHeight: CGFloat) {
         let i = 0
 //        let standardKeyPadMutableArray = NSMutableArray()
         
         while i<20 {
-            //Fill Standard Key Pad Mutable Array with the regular buttons
+            
         }
     }
     
