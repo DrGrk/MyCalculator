@@ -12,7 +12,7 @@ import UIKit
 class RegularButton: UIButton {
     
     var buttonIs: Int!
-    
+    var buttonTitle: String!
     
     init(buttonIs: Int, buttonWidth: CGFloat, buttonHeight: CGFloat) {
         
@@ -31,87 +31,132 @@ class RegularButton: UIButton {
     
     
     func assignButtonUse () {
+        
+        if buttonIs < 10 {
+            buttonTitle = String(buttonIs)
+        }
+        
         switch buttonIs {
         case 0:
-            //ASSIGN FUNCTION
-            //ASSIGN POSITION
             
             break
             
         case 1:
-            <#code#>
+            
+            break
             
         case 2:
-            <#code#>
+            
+            break
             
         case 3:
-            <#code#>
+            
+            break
             
         case 4:
-            <#code#>
+            
+            break
             
         case 5:
-            <#code#>
+            
+            break
             
         case 6:
-            <#code#>
+            
+            break
             
         case 7:
-            <#code#>
+            
+            break
             
         case 8:
-            <#code#>
+            
+            break
             
         case 9:
-            <#code#>
+            
+            break
             
         case 10:
-            <#code#>
+            
+            buttonTitle = String("+")
+            
+            break
             
         case 11:
-            <#code#>
+            
+            buttonTitle = String("-")
+            
+            break
             
         case 12:
-            <#code#>
+            
+            buttonTitle = String("*")
+            
+            break
             
         case 13:
-            <#code#>
+            
+            buttonTitle = String("/")
+            
+            break
             
         case 14:
-            <#code#>
+            
+            buttonTitle = String("=")
+            
+            break
             
         case 15:
-            <#code#>
+            
+            buttonTitle = String("Clear")
+            
+            break
             
         case 16:
-            <#code#>
+            
+            buttonTitle = String(".")
+            
+            break
             
         case 17:
-            <#code#>
+            
+            buttonTitle = String("^")
+            
+            break
             
         case 18:
-            <#code#>
+            
+            buttonTitle = String("(")
+            
+            break
             
         case 19:
-            <#code#>
+            
+            buttonTitle = String(")")
+            
+            break
             
         case 20:
+            
+            buttonTitle = String("%")
+            
+            break
+            
+        default:
+            
+            break
+        }
+        
+//USE THIS SWITCH STATEMENT TO ASSIGN X COORDINATE
+        switch buttonIs {
+        case <#pattern#>:
             <#code#>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
         default:
             <#code#>
         }
+        
+//USE THIS SWITCH STATEMENT TO ASSIGN Y COORDINATE
         
     }
     

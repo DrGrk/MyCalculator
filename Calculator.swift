@@ -13,13 +13,15 @@ import UIKit
 class Calculator: NSObject {
     
     var keyPad: KeyPad!
+    var displayScreen: UIView!
+    
     
     
     init(screenWidth: CGFloat, screenHeight: CGFloat) {
         
-        keyPad = KeyPad.init(screenWidth: screenHeight, screenHeight: screenHeight)
+        keyPad = KeyPad.init(screenWidth: screenWidth, screenHeight: screenHeight)
         
-        DisplayScreen.createDisplayScreen(screenWidth: screenWidth, screenHeight: screenHeight)
+        displayScreen = DisplayScreen.init(screenWidth: screenWidth, screenHeight: screenHeight)
         
         keyPad.createStandardKeyPad(screenWidth: screenWidth, screenHeight: screenHeight)
         

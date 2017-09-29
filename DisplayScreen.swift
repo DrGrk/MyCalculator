@@ -10,10 +10,19 @@ import Foundation
 import UIKit
 
 
-class DisplayScreen: NSObject {
+class DisplayScreen: UIView {
     
-    class func createDisplayScreen(screenWidth: CGFloat, screenHeight: CGFloat) {
-//        Create the Display Screen Here
+    var currentDisplay: NSString!
+    
+    init(screenWidth: CGFloat, screenHeight: CGFloat) {
+        
+        self.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+        self.backgroundColor = UIColor.black
+        currentDisplay = NSString()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
 }
