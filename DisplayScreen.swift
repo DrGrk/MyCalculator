@@ -12,14 +12,15 @@ import UIKit
 
 class DisplayScreen: UIView {
     
-    var currentDisplay: NSString!
+    var currentDisplay: String!
     
     init(screenWidth: CGFloat, screenHeight: CGFloat) {
-        
-        self.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+        let displayscreenFrame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight*(2/7))
+        super.init(frame: displayscreenFrame)
         self.backgroundColor = UIColor.black
-        currentDisplay = NSString()
+        currentDisplay = String()
     }
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

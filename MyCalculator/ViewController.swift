@@ -10,17 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var calculator: Calculator!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        calculator = Calculator.init(screenWidth: self.view.frame.width, screenHeight: self.view.frame.height)
+        self.view.addSubview(calculator)
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         
-        let regButtonWidth = self.view.frame.width/4
-        let regButtonHeight = self.view.frame.height/7
+//        let regButtonWidth = self.view.frame.width/4
+//        let regButtonHeight = self.view.frame.height/7
         
         
 //INIT all buttons and display screen
-        let DisplayScreen: UIView! = UIView.init()
+//        let DisplayScreen: UIView! = UIView.init()
         
 //        let A1ClearSign: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
 //        let A2SwapSign: RegularButton! = RegularButton.init(buttonWidth: regButtonWidth, buttonHeight: regButtonHeight)
@@ -87,7 +95,7 @@ class ViewController: UIViewController {
         
     
 //Set the Sizing and Position of DisplayScreen to 2/7, Just For Now
-        DisplayScreen.frame = CGRect(x: 0, y: 0, width: regButtonWidth*4, height: regButtonHeight*2)
+//        DisplayScreen.frame = CGRect(x: 0, y: 0, width: regButtonWidth*4, height: regButtonHeight*2)
 
 //Sizing of Buttons
 //        A1ClearSign.frame = CGRect(x: 0, y: DisplayScreen.frame.height, width: regButtonWidth, height: regButtonHeight)

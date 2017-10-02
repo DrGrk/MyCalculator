@@ -13,12 +13,25 @@ class RegularButton: UIButton {
     
     var buttonIs: Int!
     var buttonTitle: String!
+    var keyBoardRow: CGFloat!
+    var keyBoardColumn: CGFloat!
     
-    init(buttonIs: Int, buttonWidth: CGFloat, buttonHeight: CGFloat) {
-        
+    
+    
+    init(buttonIs: Int, screenWidth: CGFloat, screenHeight: CGFloat) {
+        let buttonWidth = screenWidth/4
+        let buttonHeight = screenHeight/7
         super.init(frame: CGRect(x: 0, y: 0, width: buttonWidth, height: buttonHeight))
+        
         self.buttonIs = buttonIs
+        self.assignButtonUse()
+        self.assignXPosition()
+        self.assignYPosition()
         self.backgroundColor = UIColor.orange
+        
+        self.frame.origin.x = screenWidth - (screenWidth/4)*self.keyBoardColumn
+        self.frame.origin.y = screenHeight - (screenHeight/7)*self.keyBoardRow
+        
     }
     
     
@@ -26,7 +39,6 @@ class RegularButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented. You did not call the correct init, check th Regular Button file for the correct init.")
     }
-    
     
     
     
@@ -42,6 +54,8 @@ class RegularButton: UIButton {
             break
             
         case 1:
+            
+            
             
             break
             
@@ -109,7 +123,7 @@ class RegularButton: UIButton {
             
         case 15:
             
-            buttonTitle = String("Clear")
+            buttonTitle = String("%")
             
             break
             
@@ -121,25 +135,26 @@ class RegularButton: UIButton {
             
         case 17:
             
-            buttonTitle = String("^")
+            buttonTitle = String("%")
+            //USE SPECIAL CHARACTER IN THE Future
             
             break
             
         case 18:
             
-            buttonTitle = String("(")
+            buttonTitle = String("%")
             
             break
             
         case 19:
             
-            buttonTitle = String(")")
+            buttonTitle = String("+/-")
             
             break
             
         case 20:
             
-            buttonTitle = String("%")
+            buttonTitle = String("Clear")
             
             break
             
@@ -148,12 +163,62 @@ class RegularButton: UIButton {
             break
         }
         
-//USE THIS SWITCH STATEMENT TO ASSIGN X COORDINATE
-        switch buttonIs {
-        case <#pattern#>:
-            <#code#>
+        
+    }
+    
+    func assignXPosition() {
+        switch buttonTitle {
+            
+        case "/", "*", "-", "+", "=":
+            keyBoardColumn = 1
+            break
+            
+        case "%", "9", "6", "3", ".":
+            keyBoardColumn = 2
+            break
+            
+        case "+/-", "8", "5", "2":
+            keyBoardColumn = 3
+            break
+            
+        case "Clear", "7", "4", "1", "0":
+            keyBoardColumn = 4
+            break
+
+            
         default:
-            <#code#>
+            break
+        }
+    }
+    
+//USE THIS SWITCH STATEMENT TO ASSIGN X COORDINATE
+        
+    func assignYPosition() {
+
+        switch buttonTitle {
+            
+        case "0", ".", "=":
+            keyBoardRow = 1
+            break
+            
+        case "1", "2", "3", "+":
+            keyBoardRow = 2
+            break
+            
+        case "4", "5", "6", "-":
+            keyBoardRow = 3
+            break
+            
+        case "7", "8", "9", "*":
+            keyBoardRow = 4
+            break
+            
+        case "Clear", "+/-", "%", "/":
+            keyBoardRow = 5
+            break
+            
+        default:
+            break
         }
         
 //USE THIS SWITCH STATEMENT TO ASSIGN Y COORDINATE

@@ -16,7 +16,6 @@ class KeyPad: NSObject {
 
     init(screenWidth: CGFloat, screenHeight: CGFloat) {
         super.init()
-        standardKeyPad = Array.init()
         createStandardKeyPad (screenWidth: screenWidth, screenHeight: screenHeight)
     }
     
@@ -24,12 +23,16 @@ class KeyPad: NSObject {
     
     
     func createStandardKeyPad(screenWidth: CGFloat, screenHeight: CGFloat) {
-        let i = 0
-//        let standardKeyPadMutableArray = NSMutableArray()
+        var i = 0
+        let standardKeyPadMutableArray = NSMutableArray()
         
-        while i<20 {
-            
+        while i<21 {
+        let button = RegularButton.init(buttonIs: i, screenWidth: screenWidth, screenHeight: screenHeight)
+        standardKeyPadMutableArray.add(button)
+            i += 1
         }
+        
+        standardKeyPad = Array.init(standardKeyPadMutableArray) as! Array<RegularButton>
     }
     
     
