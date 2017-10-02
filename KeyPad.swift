@@ -26,7 +26,7 @@ class KeyPad: NSObject {
         var i = 0
         let standardKeyPadMutableArray = NSMutableArray()
         
-        while i<21 {
+        while i<19 {
         let button = RegularButton.init(buttonIs: i, screenWidth: screenWidth, screenHeight: screenHeight)
         standardKeyPadMutableArray.add(button)
             i += 1

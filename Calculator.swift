@@ -14,6 +14,7 @@ class Calculator: UIView {
     
     
 //CONSIDER MAKING THIS A SINGLETON
+    //CONSIDER CREATING PROTOCOLS TO CHANGE THE FUNCTION OF THE CALCULATOR
     
     
     var keyPad: KeyPad!

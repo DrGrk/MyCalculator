@@ -12,9 +12,9 @@ import UIKit
 class RegularButton: UIButton {
     
     var buttonIs: Int!
-    var buttonTitle: String!
     var keyBoardRow: CGFloat!
     var keyBoardColumn: CGFloat!
+    
     
     
     
@@ -45,7 +45,7 @@ class RegularButton: UIButton {
     func assignButtonUse () {
         
         if buttonIs < 10 {
-            buttonTitle = String(buttonIs)
+            setTitle(String(buttonIs), for: UIControlState.normal)
         }
         
         switch buttonIs {
@@ -93,68 +93,48 @@ class RegularButton: UIButton {
             
         case 10:
             
-            buttonTitle = String("+")
+            setTitle("+", for: UIControlState.normal)
             
             break
             
         case 11:
-            
-            buttonTitle = String("-")
+            setTitle("-", for: UIControlState.normal)
             
             break
             
         case 12:
-            
-            buttonTitle = String("*")
+            setTitle("*", for: UIControlState.normal)
             
             break
             
         case 13:
-            
-            buttonTitle = String("/")
+            setTitle("/", for: UIControlState.normal)
             
             break
             
         case 14:
-            
-            buttonTitle = String("=")
+            setTitle("=", for: UIControlState.normal)
             
             break
             
         case 15:
-            
-            buttonTitle = String("%")
+            setTitle(".", for: UIControlState.normal)
             
             break
             
         case 16:
-            
-            buttonTitle = String(".")
+            setTitle("%", for: UIControlState.normal)
             
             break
             
         case 17:
-            
-            buttonTitle = String("%")
-            //USE SPECIAL CHARACTER IN THE Future
+            setTitle("+/-", for: UIControlState.normal)
             
             break
             
         case 18:
-            
-            buttonTitle = String("%")
-            
-            break
-            
-        case 19:
-            
-            buttonTitle = String("+/-")
-            
-            break
-            
-        case 20:
-            
-            buttonTitle = String("Clear")
+            setTitle("Clear", for: UIControlState.normal)
+
             
             break
             
@@ -167,7 +147,7 @@ class RegularButton: UIButton {
     }
     
     func assignXPosition() {
-        switch buttonTitle {
+        switch currentTitle! {
             
         case "/", "*", "-", "+", "=":
             keyBoardColumn = 1
@@ -195,7 +175,7 @@ class RegularButton: UIButton {
         
     func assignYPosition() {
 
-        switch buttonTitle {
+        switch currentTitle! {
             
         case "0", ".", "=":
             keyBoardRow = 1
