@@ -21,6 +21,9 @@ class DisplayScreen: UIView {
         currentDisplay = String()
     }
     
+    func addNumber(numberTapped: Int) {
+        
+    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

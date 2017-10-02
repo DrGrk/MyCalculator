@@ -14,7 +14,7 @@ class Calculator: UIView {
     
     
 //CONSIDER MAKING THIS A SINGLETON
-    //CONSIDER CREATING PROTOCOLS TO CHANGE THE FUNCTION OF THE CALCULATOR
+//CONSIDER CREATING PROTOCOLS TO CHANGE THE FUNCTION OF THE CALCULATOR
     
     
     var keyPad: KeyPad!
@@ -37,5 +37,7 @@ class Calculator: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
 }
         
