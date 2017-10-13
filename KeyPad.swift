@@ -10,28 +10,29 @@ import Foundation
 import UIKit
 
 
-class KeyPad: NSObject {
+class KeyPad {
     
     var standardKeyPad: Array<RegularButton>!
-
-    init(screenWidth: CGFloat, screenHeight: CGFloat) {
-        super.init()
-        createStandardKeyPad (screenWidth: screenWidth, screenHeight: screenHeight)
+    
+    init(vcView: UIView) {
+        createStandardKeyPad(vcView: vcView)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     
     
-    
-    func createStandardKeyPad(screenWidth: CGFloat, screenHeight: CGFloat) {
+    func createStandardKeyPad(vcView: UIView) {
         var i = 0
         let standardKeyPadMutableArray = NSMutableArray()
         
         while i<19 {
-        let button = RegularButton.init(buttonIs: i, screenWidth: screenWidth, screenHeight: screenHeight)
-        standardKeyPadMutableArray.add(button)
+            let button = RegularButton.init(vcView: vcView, buttonIs: i)
+            standardKeyPadMutableArray.add(button)
             i += 1
         }
-        
         standardKeyPad = Array.init(standardKeyPadMutableArray) as! Array<RegularButton>
     }
     

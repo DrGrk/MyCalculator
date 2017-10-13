@@ -14,9 +14,8 @@ class DisplayScreen: UIView {
     
     var currentDisplay: String!
     
-    init(screenWidth: CGFloat, screenHeight: CGFloat) {
-        let displayscreenFrame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight*(2/7))
-        super.init(frame: displayscreenFrame)
+    init(vcView: UIView) {
+        super.init(frame: CGRect(x: 0, y: 0, width: vcView.frame.width, height: vcView.frame.height*(2/7)))
         self.backgroundColor = UIColor.black
         currentDisplay = String()
     }

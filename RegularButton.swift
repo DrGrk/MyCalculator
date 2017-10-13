@@ -9,18 +9,27 @@
 import Foundation
 import UIKit
 
+
+
+
 class RegularButton: UIButton {
     
     var buttonIs: Int!
+    
     var keyBoardRow: CGFloat!
     var keyBoardColumn: CGFloat!
     
     
     
     
-    init(buttonIs: Int, screenWidth: CGFloat, screenHeight: CGFloat) {
+    
+    init(vcView: UIView, buttonIs: Int) {
+        let screenWidth = vcView.frame.width
+        let screenHeight = vcView.frame.height
+        
         let buttonWidth = screenWidth/4
         let buttonHeight = screenHeight/7
+        
         super.init(frame: CGRect(x: 0, y: 0, width: buttonWidth, height: buttonHeight))
         
         self.buttonIs = buttonIs
@@ -32,17 +41,26 @@ class RegularButton: UIButton {
         self.frame.origin.x = screenWidth - (screenWidth/4)*self.keyBoardColumn
         self.frame.origin.y = screenHeight - (screenHeight/7)*self.keyBoardRow
         
+        self.isUserInteractionEnabled = true
+        self.imageView!.isUserInteractionEnabled = false
+        self.showsTouchWhenHighlighted = true
     }
     
     
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented. You did not call the correct init, check th Regular Button file for the correct init.")
+        fatalError("init(coder:) has not been implemented. You did not call the correct init, check the Regular Button file for the correct init.")
     }
     
-    
+    func tap() {
+        
+    }
+
+   
+
     
     func assignButtonUse () {
+        
         
         if buttonIs < 10 {
             setTitle(String(buttonIs), for: UIControlState.normal)
@@ -54,8 +72,6 @@ class RegularButton: UIButton {
             break
             
         case 1:
-            
-            
             
             break
             
@@ -170,8 +186,6 @@ class RegularButton: UIButton {
             break
         }
     }
-    
-//USE THIS SWITCH STATEMENT TO ASSIGN X COORDINATE
         
     func assignYPosition() {
 

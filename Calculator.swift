@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class Calculator: UIView {
+class Calculator {
     
     
 //CONSIDER MAKING THIS A SINGLETON
@@ -22,16 +22,11 @@ class Calculator: UIView {
     
     
     
-    init(screenWidth: CGFloat, screenHeight: CGFloat) {
-        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-        keyPad = KeyPad.init(screenWidth: screenWidth, screenHeight: screenHeight)
-        displayScreen = DisplayScreen.init(screenWidth: screenWidth, screenHeight: screenHeight)
-        keyPad.createStandardKeyPad(screenWidth: screenWidth, screenHeight: screenHeight)
+    
+    init(vcView: UIView) {
+        keyPad = KeyPad.init(vcView: vcView)
+        displayScreen = DisplayScreen.init(vcView: vcView)
         
-        self.addSubview(displayScreen)
-        for RegularButton in keyPad.standardKeyPad {
-            self.addSubview(RegularButton)
-        }
     }
     
     required init?(coder aDecoder: NSCoder) {

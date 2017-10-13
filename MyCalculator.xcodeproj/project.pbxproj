@@ -17,13 +17,14 @@
 		76AC6ACF1F7B2C7500D23BB8 /* MyCalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76AC6ACD1F7B2C7500D23BB8 /* MyCalculator.xcdatamodeld */; };
 		76AC6AD11F7B2C7500D23BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76AC6AD01F7B2C7500D23BB8 /* Assets.xcassets */; };
 		76AC6AD41F7B2C7500D23BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76AC6AD21F7B2C7500D23BB8 /* LaunchScreen.storyboard */; };
+		76EE56381F90243D00BC01DE /* ButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EE56371F90243D00BC01DE /* ButtonTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7609DFA61F7C2F8A003CCFF9 /* RegularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularButton.swift; sourceTree = "<group>"; };
-		7609DFA81F7C3A33003CCFF9 /* KeyPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPad.swift; sourceTree = "<group>"; };
-		7609DFAA1F7D4CE9003CCFF9 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
-		7609DFAC1F7D503B003CCFF9 /* DisplayScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayScreen.swift; sourceTree = "<group>"; };
+		7609DFA61F7C2F8A003CCFF9 /* RegularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegularButton.swift; path = ../RegularButton.swift; sourceTree = "<group>"; };
+		7609DFA81F7C3A33003CCFF9 /* KeyPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyPad.swift; path = ../KeyPad.swift; sourceTree = "<group>"; };
+		7609DFAA1F7D4CE9003CCFF9 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Calculator.swift; path = ../Calculator.swift; sourceTree = "<group>"; };
+		7609DFAC1F7D503B003CCFF9 /* DisplayScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayScreen.swift; path = ../DisplayScreen.swift; sourceTree = "<group>"; };
 		76AC6AC31F7B2C7500D23BB8 /* MyCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76AC6AC61F7B2C7500D23BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76AC6AC81F7B2C7500D23BB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +33,7 @@
 		76AC6AD01F7B2C7500D23BB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76AC6AD31F7B2C7500D23BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76AC6AD51F7B2C7500D23BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76EE56371F90243D00BC01DE /* ButtonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,10 +50,7 @@
 		76AC6ABA1F7B2C7500D23BB8 = {
 			isa = PBXGroup;
 			children = (
-				7609DFAA1F7D4CE9003CCFF9 /* Calculator.swift */,
-				7609DFAC1F7D503B003CCFF9 /* DisplayScreen.swift */,
-				7609DFA81F7C3A33003CCFF9 /* KeyPad.swift */,
-				7609DFA61F7C2F8A003CCFF9 /* RegularButton.swift */,
+				76EE56371F90243D00BC01DE /* ButtonTest.swift */,
 				76AC6AC51F7B2C7500D23BB8 /* MyCalculator */,
 				76AC6AC41F7B2C7500D23BB8 /* Products */,
 			);
@@ -70,6 +69,10 @@
 			children = (
 				76AC6AC61F7B2C7500D23BB8 /* AppDelegate.swift */,
 				76AC6AC81F7B2C7500D23BB8 /* ViewController.swift */,
+				7609DFAA1F7D4CE9003CCFF9 /* Calculator.swift */,
+				7609DFA81F7C3A33003CCFF9 /* KeyPad.swift */,
+				7609DFA61F7C2F8A003CCFF9 /* RegularButton.swift */,
+				7609DFAC1F7D503B003CCFF9 /* DisplayScreen.swift */,
 				76AC6ACA1F7B2C7500D23BB8 /* Main.storyboard */,
 				76AC6AD01F7B2C7500D23BB8 /* Assets.xcassets */,
 				76AC6AD21F7B2C7500D23BB8 /* LaunchScreen.storyboard */,
@@ -111,6 +114,7 @@
 				TargetAttributes = {
 					76AC6AC21F7B2C7500D23BB8 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 59NTDPFXJ3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -158,6 +162,7 @@
 				76AC6AC71F7B2C7500D23BB8 /* AppDelegate.swift in Sources */,
 				7609DFAD1F7D503B003CCFF9 /* DisplayScreen.swift in Sources */,
 				7609DFAB1F7D4CE9003CCFF9 /* Calculator.swift in Sources */,
+				76EE56381F90243D00BC01DE /* ButtonTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 59NTDPFXJ3;
 				INFOPLIST_FILE = MyCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidguichon.MyCalculator;
@@ -292,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 59NTDPFXJ3;
 				INFOPLIST_FILE = MyCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidguichon.MyCalculator;
