@@ -13,37 +13,77 @@ class CalculatorModel {
     var displayScreenInfo: Array<String>!
     var historyOfCalc: Array<Array<String>>!
     
+    var buttonsTapped: Array<Any>!
+    var numbersTapped: Array<Int>!
+    var bedmasTapped: Array<Any>!
+    
+    
+    
+    
     
     
     init() {
-        //ADD INFORMATION FOR INIT
         self.displayScreenInfo = Array()
         self.historyOfCalc = Array()
+        self.buttonsTapped = Array()
         
     }
     
     func buttonTapped(btnTitle: String) {
+        
         if Int(btnTitle) != nil {
-//            self.numberButtonIsTapped(btnTitle: btnTitle)
-            print("Number")
+            self.numberButtonTapped(btnTitle: btnTitle)
+            //CODE WILL CONTINUE TO RUN THROUGH FUNCTION. THIS MAY NOT BE DESIRED
         }
-            //APPROPRIATE ACTION BASED ON THE BUTTON
-        else {
-            print("Not a number")
+        
+        switch btnTitle {
+            
+        case "=":
+            self.equalButtonTapped()
+            break
+            
+        case "/", "*", "+", "-", "(", ")":
+            self.bedmasButtonTapped(btnTitle: btnTitle)
+            break
+            
+        default:
+            break
         }
     }
     
-    func numberButtonIsTapped(btnTitle: String) {
+    func numberButtonTapped(btnTitle: String) {
         //IF A NUMBER BUTTON IS TAPPED
+        //ADD IT TO THE DISPLAY SCREEN INFO
+        let nmbr = Int(btnTitle)
+        self.buttonsTapped.append(nmbr!)
+        
+        //ADD IT TO THE EQUATION INFO
+        self.numbersTapped.append(nmbr!)
+        
+        //UPDATE THE DISPLAY SCREEN VIEW
     }
-    
-    func operatorButtonTapped () {
-        //IF AN OPERATOR BUTTON IS TAPPED
-    }
+
     
     func equalButtonTapped() {
-        //EQUAL BUTTON IS TAPPED
+        //EQUAL BUTTON IS TAPPED. 
+        //CONVERT STRINGS INTO INTEGER VALUES, 
+        //CONVERT BEDMAS STRINGS INTO OPERATORS,
+        //INSERT THEM INTO AN EQUATION IN THE PROPER ORDER
+        //SOLVE
+        //CALCULATE THE VALUE FROM THE DISPLAY SCREEN INFO
+        
+        //ADD TO HISTORY
     }
+    
+    func bedmasButtonTapped (btnTitle: String) {
+        //IF A bedmas BUTTON IS TAPPED
+        //CONVERT IT INTO AN OPERATOR
+        //ADD IT TO THE OPERATOR ARRAY
+        //DETERMINE WHICH TWO CHARACTERS IT IS BETWEEN
+        //UPDATE THE DISPLAY SCREEN
+    }
+    
+
     
     func addToHistory() {
         //ADD self.displayScreenInfo TO HISTORY
