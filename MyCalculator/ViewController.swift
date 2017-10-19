@@ -10,11 +10,9 @@ import Foundation
 import UIKit
 
 
-//protocol KeyBoardHandler: class {
-//    func buttonTapped(buttonTitle: String)
-//}
 
-class ViewController: UIViewController, UIGestureRecognizerDelegate {
+
+class ViewController: UIViewController, UIGestureRecognizerDelegate, CMDelegate{
 
     var calculator: Calculator!
     var calcModel: CalculatorModel!
@@ -24,7 +22,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         
         self.calculator = Calculator.init(vcView: self.view)
-        self.calcModel = CalculatorModel.init()
+        self.calcModel = CalculatorModel.init(cMDelegate: self)
         self.addSubviews()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
@@ -43,10 +41,15 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+    func equationSolved(solution: String) {
+        self.updateDisplayScreenWithAnswer(solution: solution)
     }
     
     //REVIEW NOTIFICATIONCENTER DESIGN PATTERNS
@@ -65,8 +68,13 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         calcModel.buttonTapped(btnTitle: sender.titleLabel!.text!)
     }
     
-    func updateDisplayScreen() {
-        //AFTER A BUTTON HAS BEEN TAPPED
+    func updateDisplayScreenWithButton(button: String) {
+        self.calculator.displayScreen.currentDisplay.text!.append(button)
+    }
+    
+    func updateDisplayScreenWithAnswer(solution: String) {
+        self.calculator.displayScreen.currentDisplay.text = String()
+        self.calculator.displayScreen.currentDisplay.text = solution
     }
 }
 

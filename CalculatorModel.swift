@@ -8,28 +8,29 @@
 
 import Foundation
 
+protocol CMDelegate {
+    func equationSolved(solution: String)
+    func updateDisplayScreenWithButton(button: String)
+}
+
 class CalculatorModel {
     
-    var displayScreenInfo: Array<String>!
-    var historyOfCalc: Array<Array<String>>!
-    
-    var buttonsTapped: Array<Any>!
-    var numbersTapped: Array<Int>!
-    var bedmasTapped: Dictionary<Int, Any>
+    var cMDelegate: CMDelegate
+    var displayScreenInfo: String!
+    var historyOfCalc: Array<String>!
     
     
-    init() {
-        self.displayScreenInfo = Array()
+    init(cMDelegate: ViewController) {
+        self.displayScreenInfo = String()
         self.historyOfCalc = Array()
-        self.buttonsTapped = Array()
-        self.numbersTapped = Array()
-        self.bedmasTapped = Dictionary()
+        self.cMDelegate = cMDelegate
     }
     
     func buttonTapped(btnTitle: String) {
         
         if Int(btnTitle) != nil {
             self.numberButtonTapped(btnTitle: btnTitle)
+            self.cMDelegate.updateDisplayScreenWithButton(button: btnTitle)
             //CODE WILL CONTINUE TO RUN THROUGH FUNCTION. THIS MAY NOT BE DESIRED
         }
         else {
@@ -41,22 +42,22 @@ class CalculatorModel {
                 
             case "/", "*", "+", "-", "(", ")":
                 self.bedmasButtonTapped(btnTitle: btnTitle)
+                self.cMDelegate.updateDisplayScreenWithButton(button: btnTitle)
                 break
                 
             default:
                 break
             }
         }
-        self.updateDisplayScreenView()
+    }
+    
+    func numberFormatterSetUp() {
+    
     }
     
     func numberButtonTapped(btnTitle: String) {
-        //IF A NUMBER BUTTON IS TAPPED
-        let nmbr = Int(btnTitle)
-        
         //ADD IT TO THE EQUATION INFO
-        self.numbersTapped.append(nmbr!)
-        
+        self.displayScreenInfo.append(btnTitle)
     }
 
     
@@ -67,26 +68,27 @@ class CalculatorModel {
         //INSERT THEM INTO AN EQUATION IN THE PROPER ORDER
         //SOLVE
         //CALCULATE THE VALUE FROM THE DISPLAY SCREEN INFO
-        
-        //ADD TO HISTORY
+        if self.displayScreenInfo != String() {
+            let answr = NSExpression(format:self.displayScreenInfo)
+            var solution = String(describing: answr.expressionValue(with: nil, context: nil))
+            //REMOVE THE "OPTIONAL()" PART OF THE STRING
+            self.cMDelegate.equationSolved(solution: solution)
+            //ADD TO HISTORY
+            self.displayScreenInfo = String()
+        }
     }
     
     func bedmasButtonTapped (btnTitle: String) {
         //IF A bedmas BUTTON IS TAPPED
         //ADD IT TO THE displayScreenInfo
-        
+        self.displayScreenInfo.append(btnTitle)
         
         //ADD IT TO THE EQUATION INFO //DETERMINE WHICH TWO CHARACTERS IT IS BETWEEN
-        let position = self.numbersTapped.count + self.bedmasTapped.count
-        self.bedmasTapped[position] = btnTitle
-        //CONVERT IT INTO AN OPERATOR
+//        let position = self.numbersTapped.count + self.bedmasTapped.count
+//        self.bedmasTapped[position] = btnTitle
         
         
         //UPDATE THE DISPLAY SCREEN
-    }
-    
-    func updateDisplayScreenView() {
-        //FUNCTION TO UPDATE DISPLAY SCREENVIEW
     }
     
     func addToHistory() {

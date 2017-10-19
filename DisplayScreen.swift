@@ -9,26 +9,28 @@
 import Foundation
 import UIKit
 
-
+//CONSIDER TURNING THIS INTO A TABLE VIEW/TABLE VIEW CELL. WHEN THE USER SWIPES DOWN IT BECOMES A SCROLLABLE HISTORY
 class DisplayScreen: UIView {
     
     var currentDisplay: UILabel!
     
     init(vcView: UIView) {
         super.init(frame: CGRect(x: 0, y: 0, width: vcView.frame.width, height: vcView.frame.height*(2/7)))
+        self.currentDisplay = UILabel(frame: self.frame)
+        self.currentDisplay.text = String()
+        self.currentDisplay.textColor = UIColor.white
+        self.addSubview(currentDisplay)
         self.backgroundColor = UIColor.black
     }
     
-    func addNumber(Number: String) {
-        
+
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func updateDisplayScreen() {
         
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 
 }

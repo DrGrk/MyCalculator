@@ -18,7 +18,7 @@ class Calculator {
     
     
     var keyPad: KeyPad!
-    var displayScreen: UIView!
+    var displayScreen: DisplayScreen!
     
     
     
