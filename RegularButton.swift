@@ -52,9 +52,6 @@ class RegularButton: UIButton {
         fatalError("init(coder:) has not been implemented. You did not call the correct init, check the Regular Button file for the correct init.")
     }
     
-    func tap() {
-        
-    }
 
    
 
@@ -64,48 +61,10 @@ class RegularButton: UIButton {
         
         if buttonIs < 10 {
             setTitle(String(buttonIs), for: UIControlState.normal)
+            return
         }
         
         switch buttonIs {
-        case 0:
-            
-            break
-            
-        case 1:
-            
-            break
-            
-        case 2:
-            
-            break
-            
-        case 3:
-            
-            break
-            
-        case 4:
-            
-            break
-            
-        case 5:
-            
-            break
-            
-        case 6:
-            
-            break
-            
-        case 7:
-            
-            break
-            
-        case 8:
-            
-            break
-            
-        case 9:
-            
-            break
             
         case 10:
             
@@ -218,5 +177,7 @@ class RegularButton: UIButton {
 //USE THIS SWITCH STATEMENT TO ASSIGN Y COORDINATE
         
     }
+    
+    
     
 }

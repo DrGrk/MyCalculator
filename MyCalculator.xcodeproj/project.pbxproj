@@ -17,6 +17,7 @@
 		76AC6ACF1F7B2C7500D23BB8 /* MyCalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76AC6ACD1F7B2C7500D23BB8 /* MyCalculator.xcdatamodeld */; };
 		76AC6AD11F7B2C7500D23BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76AC6AD01F7B2C7500D23BB8 /* Assets.xcassets */; };
 		76AC6AD41F7B2C7500D23BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76AC6AD21F7B2C7500D23BB8 /* LaunchScreen.storyboard */; };
+		76DC1CCD1F97E14D0012FA18 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DC1CCC1F97E14D0012FA18 /* CalculatorModel.swift */; };
 		76EE56381F90243D00BC01DE /* ButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EE56371F90243D00BC01DE /* ButtonTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		76AC6AD01F7B2C7500D23BB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76AC6AD31F7B2C7500D23BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76AC6AD51F7B2C7500D23BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76DC1CCC1F97E14D0012FA18 /* CalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		76EE56371F90243D00BC01DE /* ButtonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +52,7 @@
 		76AC6ABA1F7B2C7500D23BB8 = {
 			isa = PBXGroup;
 			children = (
+				76DC1CCC1F97E14D0012FA18 /* CalculatorModel.swift */,
 				76EE56371F90243D00BC01DE /* ButtonTest.swift */,
 				76AC6AC51F7B2C7500D23BB8 /* MyCalculator */,
 				76AC6AC41F7B2C7500D23BB8 /* Products */,
@@ -161,6 +164,7 @@
 				76AC6ACF1F7B2C7500D23BB8 /* MyCalculator.xcdatamodeld in Sources */,
 				76AC6AC71F7B2C7500D23BB8 /* AppDelegate.swift in Sources */,
 				7609DFAD1F7D503B003CCFF9 /* DisplayScreen.swift in Sources */,
+				76DC1CCD1F97E14D0012FA18 /* CalculatorModel.swift in Sources */,
 				7609DFAB1F7D4CE9003CCFF9 /* Calculator.swift in Sources */,
 				76EE56381F90243D00BC01DE /* ButtonTest.swift in Sources */,
 			);

@@ -22,7 +22,6 @@ class Calculator {
     
     
     
-    
     init(vcView: UIView) {
         keyPad = KeyPad.init(vcView: vcView)
         displayScreen = DisplayScreen.init(vcView: vcView)

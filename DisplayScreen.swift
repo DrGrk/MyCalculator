@@ -12,15 +12,18 @@ import UIKit
 
 class DisplayScreen: UIView {
     
-    var currentDisplay: String!
+    var currentDisplay: UILabel!
     
     init(vcView: UIView) {
         super.init(frame: CGRect(x: 0, y: 0, width: vcView.frame.width, height: vcView.frame.height*(2/7)))
         self.backgroundColor = UIColor.black
-        currentDisplay = String()
     }
     
-    func addNumber(numberTapped: Int) {
+    func addNumber(Number: String) {
+        
+    }
+    
+    func updateDisplayScreen() {
         
     }
     

@@ -17,28 +17,22 @@ import UIKit
 class ViewController: UIViewController, UIGestureRecognizerDelegate {
 
     var calculator: Calculator!
+    var calcModel: CalculatorModel!
 
 
-    
-    
-    
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.calculator = Calculator.init(vcView: self.view)
+        self.calcModel = CalculatorModel.init()
         self.addSubviews()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
-
-        
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
     }
     
     func setTapGestureRecognizer() {
         //CONSIDER ADDING FILTERS to DETERMINE TYPE OF BUTTON
-        
     }
     
     func addSubviews(){
@@ -68,7 +62,11 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
         
     func tap(sender: UIButton) {
-        
+        calcModel.buttonTapped(btnTitle: sender.titleLabel!.text!)
+    }
+    
+    func updateDisplayScreen() {
+        //AFTER A BUTTON HAS BEEN TAPPED
     }
 }
 
